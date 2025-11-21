@@ -1,11 +1,13 @@
-import { Text, View } from "react-native";
- 
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
+import BottomTabNavigator from './components/BottomTabNavigator';
+
 export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
+return (
+    <> {/* You can use a Fragment or View here if needed */}
+      <StatusBar barStyle="light-content" />
+      <BottomTabNavigator />
+    </>
   );
 }
